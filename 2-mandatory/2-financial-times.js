@@ -15,19 +15,21 @@ function potentialHeadlines(allArticleTitles) {
     (you can assume words will always be seperated by a space)
 */
 function titleWithFewestWords(allArticleTitles) {
-    // TODO
-    let shortestArticleTitle = "";
-    allArticleTitles.forEach((articleTitle) => {
-      if (shortestArticleTitle === "") {
-        shortestArticleTitle = articleTitle;
-        return;
-      };
-      if (articleTitle.split(" ").length < shortestArticleTitle.split(" ").length) {
-          shortestArticleTitle = articleTitle;
-      }
-    });
-    return shortestArticleTitle;
-  }
+  // TODO
+  let shortestArticleTitle = "";
+  allArticleTitles.forEach((articleTitle) => {
+    if (shortestArticleTitle === "") {
+      shortestArticleTitle = articleTitle;
+      return;
+    }
+    if (
+      articleTitle.split(" ").length < shortestArticleTitle.split(" ").length
+    ) {
+      shortestArticleTitle = articleTitle;
+    }
+  });
+  return shortestArticleTitle;
+}
 
 /*
     The editor of the FT has realised that headlines which have numbers in them get more clicks!
@@ -36,6 +38,9 @@ function titleWithFewestWords(allArticleTitles) {
 */
 function headlinesWithNumbers(allArticleTitles) {
   // TODO
+  return allArticleTitles.filter(
+    (articleTitle) => articleTitle.match(/\d/g) != null
+  );
 }
 
 /*
@@ -44,8 +49,12 @@ function headlinesWithNumbers(allArticleTitles) {
 */
 function averageNumberOfCharacters(allArticleTitles) {
   // TODO
+  return parseInt(
+    allArticleTitles
+      .map((articleTitle) => articleTitle.length)
+      .reduce((a, b) => a + b) / allArticleTitles.length
+  );
 }
-
 
 /* ======= List of Articles - DO NOT MODIFY ===== */
 const ARTICLE_TITLES = [
