@@ -6,6 +6,7 @@
 */
 function potentialHeadlines(allArticleTitles) {
     // TODO
+     return allArticleTitles.filter(articleTitle => articleTitle.length <= 65);
 }
 
 /*
@@ -15,6 +16,7 @@ function potentialHeadlines(allArticleTitles) {
 */
 function titleWithFewestWords(allArticleTitles) {
     // TODO
+    allArticleTitles.forEach(articleTitle.split)
 }
 
 /*
