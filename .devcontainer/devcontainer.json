@@ -1,16 +1,17 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
 {
-	"name": "Node.js",
+	"name": "alastair87/nodejs",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
-	"features": {
-		"ghcr.io/devcontainers/features/github-cli:1": {}
-	},
+	"image": "docker.io/alastair87/nodejs-devcontainer",
+	// "features": {
+	// 	"ghcr.io/devcontainers/features/github-cli:1": {}
+	// },
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"CodeYourFuture.cyf-extension-pack"
+				"CodeYourFuture.cyf-extension-pack",
+				"VisualStudioExptTeam.vscodeintellicode-completions"
 			]
 		}
 	}
